@@ -2,13 +2,12 @@
     padding-top: 20px;
 }
 
-.row{
-    justify-content: center;
-}
+.row{justify-content: center;}
 img{
     width: 350px;
 }
+
 p{
     text-align: justify;
-    color: rgb(35, 35, 82);
+    color:black
 }

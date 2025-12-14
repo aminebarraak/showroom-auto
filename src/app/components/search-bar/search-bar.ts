@@ -1,30 +1,34 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { Auto } from '../../Interfaces/auto';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, NgClass, NgStyle } from '@angular/common';
+
 
 @Component({
   selector: 'app-search-bar',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, NgClass, NgStyle],
   templateUrl: './search-bar.html',
-  styleUrl: './search-bar.css',
+  styleUrl: './search-bar.css'
 })
 export class SearchBar {
-@Input()  autos:Auto[]=[]
+@Input() autos:Auto[]=[]
+
 @Output() onSelectAuto=new EventEmitter<Auto>()
 
-
 selectedAutos:Auto[]=[]
+
 selectAutoList(brand:string){
   this.selectedAutos= this.autos.filter(x=>
-  x.brand.toLowerCase().startsWith(brand.toLowerCase()))
-
+    x.brand.toLowerCase().startsWith(brand.toLowerCase()))  
 }
+
 showDetails(auto:Auto){
   this.onSelectAuto.emit(auto)
-
-}
-autoCardBody(){
-    return {'card-body':true,'test':true}
 }
 
+autoTitleStyle(auto:Auto){
+  if(auto.power>=10)
+    return {'color':'red'}
+  else
+    return {'color':'black'}
+}
 }

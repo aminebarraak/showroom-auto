@@ -10,7 +10,7 @@
       
       <div class="card" style="width: 18rem;">
       <img [src]="auto.photo" class="card-img-top" >
-      <div [ngClass]="autoCardBody()">
+      <div class="card-body" [ngClass]="{'card-body-odd':odd,'card-body-even':even}">
          <h5 class="card-title">{{indice+1}} {{auto.brand}} - {{auto.model}}</h5>
          <p class="card-text">Power : {{auto.power}}</p>
          <p class="card-text">Price : {{auto.price|currency:'TND'}}</p>

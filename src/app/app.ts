@@ -3,25 +3,23 @@ import { RouterOutlet } from '@angular/router';
 import { HeadBar } from './components/head-bar/head-bar';
 import { SearchBar } from './components/search-bar/search-bar';
 import { Auto } from './Interfaces/auto';
-
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , HeadBar , SearchBar],
+  imports: [RouterOutlet, HeadBar, SearchBar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('showroom-auto');
 
-  selectedAuto:Auto |null=null
-  selectAuto(auto:Auto){
+  selectedAuto:Auto|null=null
 
+  selectAuto(auto:Auto){
     this.selectedAuto=auto
     console.table(this.selectedAuto)
   }
-
-  autoList:Auto[]=[
-    
+  
+  autoList:Auto[]= [
     {     
       id:1,
       brand: "Mercedes Benz",
@@ -183,5 +181,4 @@ export class App {
       description:"The Alfa Romeo Giulia is a premium sports sedan renowned for its elegant design, dynamic performance, and advanced technology. It is available with a range of engines, including a 280-horsepower turbocharged gasoline engine and 160- or 210-horsepower diesel options. The Giulia features a customizable 12.3-inch digital instrument cluster, an 8.8-inch touchscreen with navigation, and advanced driver assistance systems."
     }
   ]
-  
 }
