@@ -1,0 +1,10 @@
+.header{
+    padding : 20px;
+    background-color: rgb(107, 107, 204);
+
+}
+h1{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}

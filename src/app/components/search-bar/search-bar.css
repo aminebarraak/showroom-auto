@@ -1,0 +1,25 @@
+.header{
+    padding: 50px;
+}
+input {
+    color:blue;
+    border: blue 2px solid;
+}
+.auto-container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap ;
+
+}
+.test{color:red;
+}
+.card{
+    margin: 20px;
+    box-shadow: 2px 2px 10px blue;
+}
+
+.card-body{
+    background-color: green;
+    color:aliceblue ;
+}
